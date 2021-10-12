@@ -50,6 +50,7 @@ Follow the guides to install requirements:
    The configuration process stores your credentials in a file at ```~/.aws/credentials``` on MacOS and Linux, or ```%UserProfile%\.aws\credentials``` on Windows.
 
 <!-- VELOCIRAPTOR -->
+### Velociraptor
 
 <!-- INSTALLATION -->
 ### Installation
