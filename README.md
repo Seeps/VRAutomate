@@ -7,13 +7,13 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-          <li><a href="#velociraptor">Velociraptor</a></li>
+    </ul>
+          <a href="#velociraptor">Velociraptor</a>
           <ul>
             <li><a href="#installation">Installation</a></li>
             <li><a href="#usage">Usage</a></li>
             <li><a href="#agent-upload">Agent Upload</a></li>
             <li><a href="#teardown">Teardown</a></li>
-          </ul> 
       </ul>
       <a href="#roadmap">Roadmap</a><p>
       <a href="#contributing">Contributing</a>
@@ -51,7 +51,7 @@ Follow the guides to install requirements:
    The configuration process stores your credentials in a file at ```~/.aws/credentials``` on MacOS and Linux, or ```%UserProfile%\.aws\credentials``` on Windows.
 
 <!-- VELOCIRAPTOR -->
-### Velociraptor
+## Velociraptor
 
 <!-- INSTALLATION -->
 ### Installation
@@ -121,7 +121,7 @@ Once the POST requests are complete, navigate to https://www.dropbox.com/home wh
 These can be downloaded and installed, or shared.
 
 <!-- TEARDOWN -->
-## TEARDOWN
+## Teardown
 1. Give execute permissions to the Destroy script:
    ```sh
    chmod +x ./VRAutomate/destroy.sh
