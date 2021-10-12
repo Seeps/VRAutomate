@@ -32,7 +32,7 @@ This is a step-by-step guide to automate the deployment of Velociraptor in AWS. 
 <!-- PREREQUISITES -->
 ### Prerequisites
 
-Follow the guides to install requirements:
+Follow the guides to install requirements for Terraform, Ansible, and AWS:
 1. Install Terraform for your environment: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started#install-terraform
 2. Once Terraform is setup, install AWSCLI for your environment: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
 3. Install Ansible for your environment: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-specific-operating-systems 
