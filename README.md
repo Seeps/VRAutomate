@@ -122,7 +122,7 @@ After step 1 is complete, select step 2 to upload the created sensors (Windows a
 
 Once the POST requests are complete, navigate to https://www.dropbox.com/home where the agents will appear under **[User Name] > Apps > [App-Name]**
 
-These can be downloaded and installed, or shared.
+These can be downloaded and installed, or shared. For easier install, use the ```nix_install.sh``` or ```win_install.bat``` script in the respective OS folder.
 
 <!-- TEARDOWN -->
 ## Teardown
