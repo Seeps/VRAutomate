@@ -12,6 +12,7 @@
           <ul>
             <li><a href="#installation">Installation</a></li>
             <li><a href="#usage">Usage</a></li>
+            <li><a href="#agent-upload">Agent Upload</a></li>
           </ul> 
         </ul>
       </ul>
@@ -59,11 +60,11 @@ Follow the guides to install requirements:
    ```
 2. Give execute permissions to the Velociraptor script:
    ```sh
-   chmod +x ./infrastructure/Velociraptor/velociraptor.sh
+   chmod +x ./VRAutomate/velociraptor.sh
    ```
 3. Execute the script:
    ```sh
-   ./infrastructure/Velociraptor/velociraptor.sh
+   ./VRAutomate/velociraptor.sh
    ```
 
 <!-- USAGE -->
@@ -100,7 +101,7 @@ Select option 1 to start the install process:
 
 Navigate to **https://your_aws_public_ip:8889** and login via basic auth. Upon successful authentication, the Velociraptor GUI will be presented. If you forget your AWS public IP, you can find it in the Terraform output, or in the last line of the ```velociraptor.sh``` script.
 
-<!-- Agent Upload -->
+<!-- Agent-Upload -->
 ## Agent Upload
 After step 1 is complete, select step 2 to upload the created sensors (Windows and Linux by default). In order to facilitate the upload, a Dropbox API token will be required:
 
