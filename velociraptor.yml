@@ -1,0 +1,57 @@
+---
+- name: "Install Velociraptor infrastructure"
+  hosts: ubuntu
+  gather_facts: no
+  tasks:
+
+  - name: Wait for SSH (instance initialization)
+    wait_for_connection:
+  
+  - name: Gather facts
+    setup:
+
+  - name: Create agent folders
+    ansible.builtin.file:
+      path: ./{{ item }}
+      state: directory
+      mode: '0755'
+    with_items:
+      - Linux
+      - Windows
+
+  - name: Download Velociraptor binary (Linux)
+    get_url:
+      url: https://github.com/Velocidex/velociraptor/releases/download/v0.6.1/velociraptor-v0.6.1-linux-amd64
+      dest: "./velociraptor"
+      mode: +x
+  
+  - name: Download Velociraptor binary (Windows)
+    get_url:
+      url: https://github.com/Velocidex/velociraptor/releases/download/v0.6.1/velociraptor-v0.6.1-windows-amd64.msi
+      dest: "./Windows/win-velociraptor.msi"
+  
+  - name: Copy deploy.sh
+    copy:
+      src: ./deploy.sh
+      dest: ./deploy.sh
+      mode: +x
+  
+  - name: Copy win_install.bat
+    copy:
+      src: ./win_install.bat
+      dest: ./Windows/win_install.bat
+
+  - name: Copy nix_install.sh
+    copy:
+      src: ./nix_install.sh
+      dest: ./Linux/nix_install.sh
+      mode: +x
+
+  - name: Add AWS public IP to script
+    replace:
+      path: ./deploy.sh
+      regexp: 'aws_public_ip'
+      replace: "{{ ansible_host }}"
+
+  - name: Copy script to startup
+    ansible.builtin.shell: sudo echo './deploy.sh' >> ~/.bash_profile
