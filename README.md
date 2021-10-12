@@ -7,14 +7,12 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <ul>
           <li><a href="#velociraptor">Velociraptor</a></li>
           <ul>
             <li><a href="#installation">Installation</a></li>
             <li><a href="#usage">Usage</a></li>
             <li><a href="#agent-upload">Agent Upload</a></li>
           </ul> 
-        </ul>
       </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -50,6 +48,8 @@ Follow the guides to install requirements:
    aws configure
    ```
    The configuration process stores your credentials in a file at ```~/.aws/credentials``` on MacOS and Linux, or ```%UserProfile%\.aws\credentials``` on Windows.
+
+<!-- VELOCIRAPTOR -->
 
 <!-- INSTALLATION -->
 ### Installation
@@ -101,7 +101,7 @@ Select option 1 to start the install process:
 
 Navigate to **https://your_aws_public_ip:8889** and login via basic auth. Upon successful authentication, the Velociraptor GUI will be presented. If you forget your AWS public IP, you can find it in the Terraform output, or in the last line of the ```velociraptor.sh``` script.
 
-<!-- Agent-Upload -->
+<!-- AGENT-UPLOAD -->
 ## Agent Upload
 After step 1 is complete, select step 2 to upload the created sensors (Windows and Linux by default). In order to facilitate the upload, a Dropbox API token will be required:
 
@@ -117,6 +117,18 @@ After step 1 is complete, select step 2 to upload the created sensors (Windows a
 Once the POST requests are complete, navigate to https://www.dropbox.com/home where the agents will appear under **[User Name] > Apps > [App-Name]**
 
 These can be downloaded and installed, or shared.
+
+<!-- TEARDOWN -->
+## TEARDOWN
+1. Give execute permissions to the Destroy script:
+   ```sh
+   chmod +x ./VRAutomate/destroy.sh
+   ```
+2. Execute the script:
+   ```sh
+   ./VRAutomate/destroy.sh
+   ```
+Enter the case name and type in 'yes' to destroy.
 
 <!-- ROADMAP -->
 ## Roadmap
