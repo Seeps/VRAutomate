@@ -12,10 +12,11 @@
             <li><a href="#installation">Installation</a></li>
             <li><a href="#usage">Usage</a></li>
             <li><a href="#agent-upload">Agent Upload</a></li>
+            <li><a href="#teardown">Teardown</a></li>
           </ul> 
       </ul>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+      <a href="#roadmap">Roadmap</a><p>
+      <a href="#contributing">Contributing</a>
   </ol>
 </details>
 
