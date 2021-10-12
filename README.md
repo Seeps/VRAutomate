@@ -6,6 +6,7 @@
   <ol>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#introduction">Introduction</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
     </ul>
           <a href="#velociraptor">Velociraptor</a>
@@ -22,6 +23,9 @@
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+<!-- INTRODUCTION -->
+### Introduction
 
 Step-by-step guide to automate the deployment of Velociraptor in AWS. By the end of this process, you will have a fully-functional Velociraptor instance hosted in AWS and accessible by its public IP address over port 8889 with a self-signed certificate. As this setup uses basic auth instead of SSO/OAUTH (hard DNS requirement), it is protected by inbound rules on 8889 (GUI) and 22 (server) to just allow your public IP address, while port 8000 remains open for all so sensors can check in.
 
