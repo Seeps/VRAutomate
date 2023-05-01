@@ -21,13 +21,13 @@
 
   - name: Download Velociraptor binary (Linux)
     get_url:
-      url: https://github.com/Velocidex/velociraptor/releases/download/v0.6.1/velociraptor-v0.6.1-linux-amd64
+      url: https://github.com/Velocidex/velociraptor/releases/download/v0.6.8-2/velociraptor-v0.6.8-linux-amd64
       dest: "./velociraptor"
       mode: +x
   
   - name: Download Velociraptor binary (Windows)
     get_url:
-      url: https://github.com/Velocidex/velociraptor/releases/download/v0.6.1/velociraptor-v0.6.1-windows-amd64.msi
+      url: https://github.com/Velocidex/velociraptor/releases/download/v0.6.8-2/velociraptor-v0.6.8-2-windows-amd64.msi
       dest: "./Windows/win-velociraptor.msi"
   
   - name: Copy deploy.sh
