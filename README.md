@@ -47,8 +47,24 @@ Follow the guides to install requirements for Terraform, Ansible, and AWS:
       brew install ansible
       ```
 
-5. Sign into AWS and create an access key. You will need the key and secret handy: https://console.aws.amazon.com/iam/home?#/security_credentials
-6. Configure AWSCLI with your key and secret (ignore the other prompts):
+4. Sign into AWS and create an access key. You will need the key and secret handy: https://console.aws.amazon.com/iam/home?#/security_credentials
+   1. Permissions needed in AWS for the user:
+   ```
+   ec2:DescribeInstances
+   ec2:DescribeSecurityGroups
+   ec2:DescribeImages
+   ec2:DescribeKeyPairs
+   ec2:CreateSecurityGroup
+   ec2:CreateTags
+   ec2:CreateKeyPair
+   ec2:CreateSecurityGroupRule
+   ec2:RunInstances
+   ec2:TerminateInstances
+   ec2:DeleteSecurityGroup
+   ec2:DeleteKeyPair
+   ```
+
+5. Configure AWSCLI with your key and secret (ignore the other prompts):
    ```sh
    aws configure
    ```
